@@ -26,6 +26,11 @@ h2:first-of-type {
     margin-top: 0.5em;
 }
 
+.darkModeButton{
+    width: 5em;
+    height: 5em;
+}
+
 table,
 tr,
 td {

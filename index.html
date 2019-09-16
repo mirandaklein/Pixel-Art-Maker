@@ -12,9 +12,8 @@
 <body onLoad= makeGrid();>
     <h1>
         <span class="pixel">Pixel</span> <span class="artMaker"> Art Designer</span></h1>
-        <button onclick="swapStyleSheet('styles.css')">Default Style Sheet</button>
-        <button onclick="swapStyleSheet('stylesDark.css')">Dark Style Sheet</button>
-        
+        <img id="styleSwitch" src='smartdarkmode-appicon.png' onclick="clickStyleChange();" alt='javascript button' height='50px'/>
+
 
     <h2>Choose Grid Size</h2>
     <form id="sizePicker" onSubmit= "makeGrid();">
