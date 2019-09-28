@@ -6,7 +6,7 @@ body {
 }
 
 h1 {
-    margin: 0.2em;
+    margin: 0.1em;
 }
 .pixel{
     font-size: 85px;
@@ -20,10 +20,8 @@ h1 {
 
 h2 {
     margin: 1em 0 0.25em;
-}
-
-h2 {
     margin-top: 0.3em;
+    font-size: 20px;
 }
 
 .darkModeButton{
@@ -33,21 +31,25 @@ h2 {
 
 table,
 tr,
-td {
-    border: 1px solid #22262A;;
-}
+td 
+
+
 
 table {
     border-collapse: collapse;
     margin: 0 auto;
 }
 
+tbody{
+    border: 1px solid black
+}
+
 tr {
-    height: 20px;
+    height: 15px;
 }
 
 td {
-    width: 20px;
+    width: 15px;
 }
 
 input[type=number] {
@@ -55,7 +57,7 @@ input[type=number] {
     background: white;
     color: #22262A;
     font-family: 'Quicksand', sans-serif;
-    font-size: 20px;
+    font-size: 15px;
 
 }
 input[type=submit] {
