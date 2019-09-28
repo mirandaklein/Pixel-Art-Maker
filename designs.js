@@ -32,7 +32,7 @@ function makeGrid() {
         isTouchStart = true;
         changeColor(this);
             }
-      cell.ontouchend= function(){
+      cell.ontouchmove= function(){
         if (isTouchStart) {
           changeColor(this);
         }
@@ -41,6 +41,9 @@ function makeGrid() {
   }
   document.onmouseup= function() {
     isMouseDown = false;
+  };
+  document.ontouchend= function(){
+    isTouchStart = false;
   };
 
   event.preventDefault();
