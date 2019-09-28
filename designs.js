@@ -3,27 +3,36 @@ const pixelCanvas = document.getElementById("pixelCanvas");
 
 //Changes cell based on color chosen
 function changeColor() {
+    
   const color = document.getElementById("colorPicker").value;
   this.style.background = color;
 }
-
-
-//Makes initial grid on load, makes grid based on heigth x width, clears grid
-function makeGrid() {
-  const gridHeight = document.getElementById("inputHeight").value;
-  const gridWidth = document.getElementById("inputWidth").value;
-  pixelCanvas.innerText = ""; // empty table
-
-  for (let h = 0; h < gridHeight; ++h) {
-    const row = pixelCanvas.insertRow(-1); // insert new row at the last position
-    for (let w = 0; w < gridWidth; ++w) {
-      const cell = row.insertCell(-1); //insert new cell at the last position
-      cell.onclick = changeColor;
-      cell.onmouseover= changeColor;
-  };
+/*
+function changeColor() {
+  console.log(this.onmousedown)
+  this.onmousedown = function() {
+    const color = document.getElementById("colorPicker").value;
+    this.style.background = color;
+  }
 }
 
-    
+*/
+
+//Makes initial grid on load, makes grid based on height x width, clears grid
+function makeGrid() {
+  const gridRow = document.getElementById("inputHeight").value;
+  const gridCells = document.getElementById("inputWidth").value;
+  pixelCanvas.innerText = ""; // empty table
+
+  for (let r = 0; r < gridRow; ++r) {
+    const row = pixelCanvas.insertRow(-1); // insert new row at the last position
+    for (let c = 0; c < gridCells; ++c) {
+      const cell = row.insertCell(-1); //insert new cell at the last position
+      
+      cell.onclick = changeColor;
+ }
+
+}  
   
   event.preventDefault();
 }
