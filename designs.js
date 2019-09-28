@@ -9,6 +9,7 @@ function changeColor(cell) {
 //Makes initial grid on load, makes grid based on height x width, clears grid
 function makeGrid() {
   let isMouseDown = false;
+  let isTouchStart = false;
   const gridRow = document.getElementById("inputHeight").value;
   const gridCells = document.getElementById("inputWidth").value;
   pixelCanvas.innerText = ""; // empty table
@@ -22,11 +23,20 @@ function makeGrid() {
           isMouseDown = true;
           changeColor(this);
         }
-        cell.onmouseover= function() {
+      cell.onmouseover= function() {
           if (isMouseDown) {
             changeColor(this);
           }
-        };
+        }
+      cell.ontouchstart= function(){
+        isTouchStart = true;
+        changeColor(this);
+            }
+      cell.ontouchend= function(){
+        if (isTouchStart) {
+          changeColor(this);
+        }
+      }
     }
   }
   document.onmouseup= function() {
